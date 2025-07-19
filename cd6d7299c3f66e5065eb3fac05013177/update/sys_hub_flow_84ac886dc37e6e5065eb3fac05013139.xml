@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>crawl_drugbank_data</internal_name>
+        <label_cache>[{"name":"flow_variable.debug","label":"Flow Variables➛Debug","type":"string","base_type":"string","usedInstances":{"a9bc7a22-50d0-4233-83d5-437b99baa76a":["debug-0"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"028965b1-d12b-48e8-a4ad-c9745eec83d7"}},{"name":"flow_variable.pdf_cdn","label":"Flow Variables➛PDF CDN","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["source_pdf"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"259805d9-72fa-480b-8cdb-e4d81c5d612d"}},{"name":"flow_variable.base_url","label":"Flow Variables➛Base URL","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["source_data"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"5b791172-1843-4de1-b03b-460f9edc9e04"}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.phan_loai","label":"5 - For Each➛drug➛phan loai","reference":"","reference_display":"phan loai","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["phan_loai"]},"attributes":{}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.nuoc_dang_ky","label":"5 - For Each➛drug➛nuoc dang ky","reference":"","reference_display":"nuoc dang ky","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["nuoc_dang_ky"]},"attributes":{}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.meta","label":"5 - For Each➛drug➛meta","reference":"","reference_display":"meta","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["meta_data","source_pdf"]},"attributes":{}},{"name":"flow_variable.page","label":"Flow Variables➛Page","reference":"","reference_display":"","type":"string","base_type":"string","usedInstances":{"2d729b55-c864-4242-a827-61ca69bc83ae":["page"],"93c5ac0d-3326-4537-813b-72db0cf8fcef":["page-0"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"65733b92-1bd3-4a53-abdd-1c948da67105"}},{"name":"flow_variable.size","label":"Flow Variables➛Size","type":"string","base_type":"string","usedInstances":{"2d729b55-c864-4242-a827-61ca69bc83ae":["page_size"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"fb46ee1b-f055-4f75-bb21-a5b9232260bc"}},{"name":"2d729b55-c864-4242-a827-61ca69bc83ae.drugs","label":"3 - Get Drug From DrugBank➛Drugs","reference_display":"Drugs","type":"array.object","base_type":"array.object","usedInstances":{"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a":["items"],"a9bc7a22-50d0-4233-83d5-437b99baa76a":["debug-0"]},"attributes":{"sourceId":"7aab9d55-3dfe-4204-9c06-969a3495f2b5","child_name":"drug","uiUniqueId":"594c9d2c-b14c-493f-8d99-b5dbb5ab68cb","uiTypeLabel":"Array.Object","co_type_name":"FD68db8861e0be6e50fa9f92604c0690ea","child_label":"drug","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"4ba685fb-a23e-4765-b751-17b4f213a172","uiType":"array.object","child_type":"object","child_uiUniqueId":"a8975954-341a-4ed4-94d0-90ba1f0af8d2"}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.id","label":"5 - For Each➛drug➛id","reference":"","reference_display":"id","type":"string","base_type":"string","usedInstances":{"1f639b99-3744-42fc-b0bd-8a2c390184d5":["conditions"],"5652947e-b964-49e4-addf-6a74f5ad4f9e":["id","source_data"]},"attributes":{}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.ten_thuoc","label":"5 - For Each➛drug➛ten thuoc","reference":"","reference_display":"ten thuoc","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["ten_thuoc","source_data"]},"attributes":{}},{"name":"ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a.item.hoat_chat","label":"5 - For Each➛drug➛hoat chat","reference":"","reference_display":"hoat chat","type":"string","base_type":"string","usedInstances":{"5652947e-b964-49e4-addf-6a74f5ad4f9e":["hoat_chat"]},"attributes":{}},{"name":"2d729b55-c864-4242-a827-61ca69bc83ae.has_more_value","label":"3 - Get Drug From DrugBank➛Has More Value","reference_display":"Has More Value","type":"boolean","base_type":"boolean","usedInstances":{"cac27e26-f92b-4be7-9a82-9bf9c1bfc73b":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"736a4b8a-88ec-4fac-bfbf-9fe6c48cb680"}},{"name":"flow_variable.page_size","label":"Flow Variables➛Page Size","type":"string","base_type":"string","usedInstances":{"2d729b55-c864-4242-a827-61ca69bc83ae":["page_size"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"89ba65b1-4edf-4196-b3d7-1f2b6047c61d"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Crawl DrugBank Data</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:28:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84ac886dc37e6e5065eb3fac05013139</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Crawl DrugBank Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Drugbank" source="x_878770_drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name>sys_hub_flow_84ac886dc37e6e5065eb3fac05013139</sys_update_name>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_variable_value action="delete_multiple" query="document_key=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN48ac886dc37e6e5065eb3fac0501313b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>84ac886dc37e6e5065eb3fac05013139</id>
+        <name>Crawl DrugBank Data</name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:28:42</sys_created_on>
+        <sys_id>48ac886dc37e6e5065eb3fac0501313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 06:28:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=48ac886dc37e6e5065eb3fac0501313b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN809e4465c3be6e5065eb3fac0501316d"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:10</sys_created_on>
+        <sys_id>809e4465c3be6e5065eb3fac0501316d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 06:37:40</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXU/cMBD8K5Wfj8i5o4XmDQmdxEOLVE68IBRt7M2dpfVHHecgIP4768ScWlrLLzvrnZ0Z+eFVEHRIohE7Y1GshHEJowPaTQEZ3ZPR2KalZ8FpSD5OoklxxJXoo7c7tIEg8eMeaGDQR41RNLWUK3EEGvFuGm40czGDA5tZC9/c5bL+fiHPZM33i5TNfLmrDoZ0RCeah8eVCBB5NmXm108tk8k3oM9RK6k2az5Sri/P6+7bpqvXegOIX5nwk9O/taT/+P3TCT4ndBr1yeY/YUQEfetoOr04cJaLbQvPg3nBQhWxRxavcGmeylabgaOcFlgdvFF4G5LxbkESdFRmlKfRup+LA6419jBSui+BMjIOzIcha84qiqT+7uCffn0s3Bo3GyxN8groVEFK0XRjwiEnjoSWiVoLIRi3b0P0RzMPsxZbzbFVPfknXjqYvatAZeEVRwTVlvHrGb6HaLKLH0zDw2+z+/b3mPcuPoridjHND0ooW4NUPtGgognpihccP37d2+M7vozADsoCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN909e4465c3be6e5065eb3fac0501318b,9c9e4465c3be6e5065eb3fac05013185"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>909e4465c3be6e5065eb3fac0501318b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <ui_id>5652947e-b964-49e4-addf-6a74f5ad4f9e</ui_id>
+        <values>H4sIAAAAAAAA/+1WS27bMBC9SqC1LEhWIjveFSi8awK0RTZpSozIkUWEolSKcuIaOkTP09P0Jh1KsuKmDhAHBdoC8Y7zefNm+Kjx9daTwlt4SYTh2XmU8DiK42kYTuenUZrEaTQVMSCeer6noUCKtJAqZN3B99agGme8Z/PZfDYLmTDNKgV9y2zelJwihKwrBZurIfBj3vz4/s05eC6VMKi9xfWN71VgCNGi8RbbRy67qZApSFG5fFf95KKv/lzmvyQ/0Ymr8thWGuEIhb6H9xa1QKqXgarR9wrQAmxpNt7CmoYMBkFcarUZI3KpLQF6Lva+ll8JfR66uAypNY69bzyyYVC9meel5HhZWVnq3tIRG5ylagp90TfhRowZNMruRkyWpiY8rBxlR2JglH3Iy7v3u4JLqbvuBqcqOajxBNYamTYWa3cfqLAgIFZAVUm9YpUp17JLJi5FsFJ0CDJV3lHRWq50ANwRD2hCECzJ/rYzX4GRrot3BEPJbdc9+9K4un0fA2PWN00BNTeysm8Ibo0DudbfSVZgeP7kxUfpw0V3Kq335CrFpyYMY7HdcpylZ4jTSZyF0eQ0mfFJKsL55DzlIsnm0TSNIJAWi0CKtv1MKuiVfXz+mEoweQmW8Rzs8TBjKsHQgwHmhnw8jEslBE18CIHu9HZzPMh+NoFVOWimSpDHI42pBFOXjXHvYa+vTlvrQT5BCiTvxqi2feH8Hew0ebEIBoKVyA7zIwfjQh9Hr7+Q3z+Yr1J9leq/KtUXrnAsSOAWT3qJ+8/+mu8AlhKVqA983nc7fCjA1kOBYY9Hf2qPR0nY/f7ONu95/mfLfO9/1eG1vjM6invPqjsejIY1inFIbdve/ASdbkeYywoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Get Drug From DrugBank">14db8861c3be6e5065eb3fac05013193</action_type>
+        <action_type_parent display_value="Get Drug From DrugBank">d57fba1dc3f66e5065eb3fac050131ba</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>cac27e26-f92b-4be7-9a82-9bf9c1bfc73b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>9c9e4465c3be6e5065eb3fac05013185</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 07:16:46</sys_updated_on>
+        <ui_id>2d729b55-c864-4242-a827-61ca69bc83ae</ui_id>
+        <values>H4sIAAAAAAAA/+1TTY/TMBD9K8jnJnKbpE16Q0IrIQGLKOxltYrG9qS15DjZxOluqfrfGSdpd7eCpUIcOHCcD8+898bvds+0YkumpBJpOp/KSOAcEz5PUEQFSJ7waTTNEjZhFkqkzhrWSNEWTOfD/b4w1UO+hUaDMBj68uFADUq3tYHdze/65EYb1aBly9u7CU1vaI3Dhi33ZyW3qzE3INDQuJVrtF3T80vRHx9+HuC/JONHU9Qeh1aN8gimE4aPDq1CWlKAaXHCSrAKXNXsTpkGQV1b85TYaOtoGvPNj63+TqNTzrnvLJDoSByqpzAftRrSclNpide105UdMs4rNhYr05X204Deq4wFdMYdVaZM19I8rD1qD2PEVKw21cOX48IrbXuCY9FUEswpAkcyiM5h62/Q6a9n4gyZD+eHQIMlbcxLqGvK5HVTbXW/hUCX4dpQEPZ/QGGr1zYE6RmGpCaEV5R/16dvxg/ykcbQY7/um9X3Hb73h47SGY9QyiBaFCKIQSSBkBkPUjmL1UIk84Kn7NBLm993ntQg0ihHPihKDa1sdO3eEoQtjswPk9ELCX/1N8HL75P3F37dEH3Ppa54av4b1riAzHNrvFkNbH5C8Bcmmf03yT9mklhEmZrLRQCLbBHEaVYEaVRgEM2m5BLJY5HJPzbJ3Q/KhPjMMgYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN16b287bdc336221065eb3fac050131ff,549e4465c3be6e5065eb3fac05013184,549e4465c3be6e5065eb3fac05013187,d09e4465c3be6e5065eb3fac05013188"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9ab287bdc336221065eb3fac050131fe</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <flow_variables_assigned>debug</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>cac27e26-f92b-4be7-9a82-9bf9c1bfc73b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-18 14:22:47</sys_created_on>
+        <sys_id>16b287bdc336221065eb3fac050131ff</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <ui_id>a9bc7a22-50d0-4233-83d5-437b99baa76a</ui_id>
+        <values>H4sIAAAAAAAA/+1VwW7bMAz9F51jw3Zsx8mtQFGgwLYCa9bLUBiyRCfCZMm1pKSZ4X8fZTtpkZ0G7Jib+UiRj48k3BPtbOus2eo7Y8ROkc3P1wURymP43RNFGyAbwqFyO7IgByqdt/u+lvpYHmgnaCUhHP3DsOj7hK+SdZVlASvyNEiTNAlokayCPGY0X1esWFIM79zODAMm5MK0kp5e/ndetheSdzA31NIO+7DQkU1/5bKnFkpJK5BY/tl2Qvk+BUdrnVdJsao4Wy7zJImjPINqWVMWZVG8jOsU484P72d9ruTyydE057S6455DtCDwbkFxwDI1lQYWpKGKU6u70wXpgPInJT+AvVAWsxEf/G7Eb0xdRFHkI2vAhhhM3otZzupOMNtrweCptUKrCbFe49mppWvUt4m+nwvU1El7ngsizmA+aD1rT2PmVD/v9fH7ueCDUGODs1NqRuXFohZlqJwF46fgxPZKnAn5cj0KkNBgxbKhbYtI2Xb6IMYqSLoJdxKNcNwaDn6FQ8p8hyGqScMHxO9H+GVeqa+YBh/7cj+UeHPw6EcdJcU6z6o44HFSBWkBRUBTygO2XqUZAG4XX5FhlLZ8c76pSaRZjnJSFAMM60Rr75DCAebOh1d/N1P16ajG7fp7W27HdTuu23H9+3FxYMIgq62n8Hj+d3nHCVdGsM/QUXe/fD8f2PAHAOGC9gUHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d89e4465c3be6e5065eb3fac05013183</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <flow_variables_assigned>page_size,base_url,pdf_cdn</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>549e4465c3be6e5065eb3fac05013184</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <ui_id>cbe1fa4f-779f-42b7-8ab2-063ab6ee6faa</ui_id>
+        <values>H4sIAAAAAAAA/+1Y207bQBD9FeTnOPE9dl4qWoSERKGCwEuLrL2MkxWb9WKvAyni35mNkxClaaVWqVRU58l79jJnzp6xR3l2ysboxtTj8riuxUQ5o693PUcoi+HzsyO4M3KcnqPIDPBJkwnktfgOCM2JbCyWePjDMZsKyStYnaFJhVsMVM7oeWfKLDTkklCQuPvaVEJNcPsyUhplEEVJzEIKCcReEgMNC8K82PNDfxjguvXGL0jl6LqlsoedDYJQvT6+rLjl4vUceDKgOGC4gsgaes6MKE5MWS02SAWEXyr5BkyFMq0QM/K0jDBKMWu7sgBMjEE7uxnmXNRakkULs2kpGFxqI0rVIoZQudrDStnM1EWbAo45FKSR5nYlLyJNjeeBtqwtjRWn4npaPl6tA54KtUxwNSlLRuRmRAzKQBsDtb2NRox3xGmR890rAQkzjJjPiNaI5Loq52IZBUnP+hOJg34hy0dkZ93TJ8xm2Ec1Sf8U8ZMlfEsqYdP9jMfgZhvuRomHBs6WV55RksTUdyPghRv5WeLSkA9dvwho4kVDlvjceVlKmz80NqlWpJUceasoLqhZJbQ5RgpzWGX+0vvBwZSgmE0ltww8NUbXo8GAV82EEnXfn6tBDdUcr6zegAOixUA3VAo2MNOmZB/QRWP78K3xvJBbTu2V3x742EPUVZbQIB1SzsIwCQJ/p644bNXVRxTo6ObqfK9kXVW9k6qK6TDz8YXp+mkUuhEH36VeSN0o8YoMOMvAiw5YVZoXOeNqT1Eh2t+ugJ/XyZ6Vh7C+T35l/cLf/qScnB59OrnYl1Zn/Hdi/CDOUi/mmTsMCuJGqUfdlHHqQsRTn8U88YM//5zcWX+30X+7Pdpxfdc1dTbvuqaua+qq6h+qqq5r6rqm/9L4f7tr4sBEjazGlsLZ+u8lO7FA0wi2DT2W1b3N5w17eQUM6AsXqBIAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">909e4465c3be6e5065eb3fac05013187</block>
+        <comment>Look Up Record With ID If Not Found Then Insert</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>549e4465c3be6e5065eb3fac05013187</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <ui_id>cac27e26-f92b-4be7-9a82-9bf9c1bfc73b</ui_id>
+        <values>H4sIAAAAAAAA/+2UX2vbMBTFv4rRs2McO4ndvJWNwmBbYS192Yq5luRYTJY8SU6ahXz3XflPWtqGldHH5Sk60r33HOmXHIjuXNs5e6svrRUbRdbf70MilNfw+4EoaDhZE6oVE05oVfRCSLYgO7/hah4w020CMAb2QQ02UDpotOHBcCQkTNhWwv7u7RW0FpIZPrppweBMxw1ZH55tuX3LCwkll9j4xhmhNlguGK5KBgkt40WWxuk8jePVPKFJllb4WUG2jPHcVPhhChd87pXwbGo/D3U7TdKGeVvzOA4Jf3BcMY6zK5CWh6QBxcBpsz8phgO7VvJRqIVy2I/4ww9W/MbmyXLpD1YcQ1I+bJ6WxXiXg0xrLSi/br3DQXFQyrGGatk16usQxL8Cr6CTbnoFVDqL/XjrTXsXo6Xqpta7b9PAK6H6hOOm1BTkaQUO76HsHLf+ZbjkDTYqGmhbvJ2iNXor+mL00kQbiYuoknqHQz1qEVBvPMI7gugK9Y+9fAdG+BRfsA0WH/v0xa/Ozx1yjI6LITQesNSI1l1iuy0fzR3Dl+g+ofZwSFiWXJTL5Yzmq8VskSySGeRJNlvNKawuSpqnwCNks/BgFn3d8fiji+OU9QNecv0uPd+DfJbN07w6R35OXyP/FebP4578DXdnurfSHvte/3GfcMcntMXA85htIONffwb3nvlhgh3AYZwKi0ZuvfZp+qP3G3skQNCn0k6bnz7Co3b8A2LHCFkyBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">109e4465c3be6e5065eb3fac05013188</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>cac27e26-f92b-4be7-9a82-9bf9c1bfc73b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>d09e4465c3be6e5065eb3fac05013188</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:33:59</sys_updated_on>
+        <ui_id>ce7b5ee2-3f01-467c-bd08-9bcd6f812b1a</ui_id>
+        <values>H4sIAAAAAAAA/51STW/bMAz9Lzonhq2kbpxbgaFAD1uBruhlKAxaohNhsuTpI6ln+L+Pip1s6HEnm4/k43siR2Zj6GPwr/bBe3UwbP/jfcWUSRj9j8xAh2zPVMDOsxU7gY4pHkcu73nV3N2txa7crrd8y9ew4/frshBQVo3YbQAz6eLBTxM1SuV7DcPb//aLo9LS4SKwB0e6Ajq2Hz+lwtBjraFBTWNeUFgnk3AlKSwq2VZFXokNLzc8z/luWzTlpim4pGmypLpr59Ni+JP/xE6hu/HSJ6ng+YrhR0AjkQa1oD2uWAdGQrBuYPvgIgEOQT4bPdwqjsoEomOp9sOr38Rd5HkqbJEcCZyTt7BennGGxdEqgc99UNbMSIBGLz3C6tiZb7P8tABsIepwXQAh0RMf9klzUrFIar8f7fnlOvBRmYu/JamtAH2LIASnmhjQpzWgxo6I6g76XplD3Tt7Updm0tJlB01B1mp7pqHp1DIQSXhGTwTZI+FfLvAbOJVcfCUaap4u7utfMc2dfSyK69k0FXjhVB8eiO6Ei7jpPd3qzOTnw5AolKeBrwl7ul54Sgy0ZCX+hc7W/UxS/2LTHxJAeLErAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN5337dc25c3fe6e5065eb3fac05013196,9b37dc25c3fe6e5065eb3fac05013196"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>84ac886dc37e6e5065eb3fac05013139</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.page}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 07:15:04</sys_created_on>
+        <sys_id>5337dc25c3fe6e5065eb3fac05013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 07:15:04</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2e4df357-9cbf-4010-9092-5741e3a72f5d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>84ac886dc37e6e5065eb3fac05013139</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>2e4df357-9cbf-4010-9092-5741e3a72f5d</source_ui_id>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 07:15:04</sys_created_on>
+        <sys_id>9b37dc25c3fe6e5065eb3fac05013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 07:15:04</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>092c7831-8c19-4b67-8923-2ddd27da7439</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=84ac886dc37e6e5065eb3fac05013139^sys_idNOT IN1ab287bdc336221065eb3fac050131f1,489e4465c3be6e5065eb3fac0501316e,849e4465c3be6e5065eb3fac05013172,96b287bdc336221065eb3fac050131de,96b287bdc336221065eb3fac050131f4"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=259805d9-72fa-480b-8cdb-e4d81c5d612d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>pdf_cdn</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>PDF CDN</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</model>
+        <model_id>84ac886dc37e6e5065eb3fac05013139</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_84ac886dc37e6e5065eb3fac05013139</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-18 14:22:47</sys_created_on>
+        <sys_id>1ab287bdc336221065eb3fac050131f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:22:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=65733b92-1bd3-4a53-abdd-1c948da67105</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>page</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Page</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</model>
+        <model_id>84ac886dc37e6e5065eb3fac05013139</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_84ac886dc37e6e5065eb3fac05013139</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:10</sys_created_on>
+        <sys_id>489e4465c3be6e5065eb3fac0501316e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 06:37:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=89ba65b1-4edf-4196-b3d7-1f2b6047c61d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>page_size</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Page Size</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</model>
+        <model_id>84ac886dc37e6e5065eb3fac05013139</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_84ac886dc37e6e5065eb3fac05013139</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:37:11</sys_created_on>
+        <sys_id>849e4465c3be6e5065eb3fac05013172</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 06:37:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=5b791172-1843-4de1-b03b-460f9edc9e04</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>base_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Base URL</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</model>
+        <model_id>84ac886dc37e6e5065eb3fac05013139</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_84ac886dc37e6e5065eb3fac05013139</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-18 14:22:47</sys_created_on>
+        <sys_id>96b287bdc336221065eb3fac050131de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:22:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=028965b1-d12b-48e8-a4ad-c9745eec83d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Debug</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Crawl DrugBank Data">84ac886dc37e6e5065eb3fac05013139</model>
+        <model_id>84ac886dc37e6e5065eb3fac05013139</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_84ac886dc37e6e5065eb3fac05013139</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-18 14:22:47</sys_created_on>
+        <sys_id>96b287bdc336221065eb3fac050131f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-18 14:22:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=84ac886dc37e6e5065eb3fac05013139"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=84ac886dc37e6e5065eb3fac05013139"/>
+</record_update>

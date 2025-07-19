@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_designer_co_template">
+    <sys_hub_flow_designer_co_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <complex_definition>FDf51bc4adf67e6e50176758198521a2d1</complex_definition>
+        <sys_class_name>sys_hub_flow_designer_co_template</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-17 06:21:59</sys_created_on>
+        <sys_id>fd1bc4adc37e6e5065eb3fac050131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Drug Object</sys_name>
+        <sys_package display_value="Drugbank" source="x_878770_drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name>sys_hub_flow_designer_co_template_fd1bc4adc37e6e5065eb3fac050131d1</sys_update_name>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-17 06:21:59</sys_updated_on>
+        <template_label>Drug Object</template_label>
+        <template_name>drug_object</template_name>
+    </sys_hub_flow_designer_co_template>
+</record_update>
