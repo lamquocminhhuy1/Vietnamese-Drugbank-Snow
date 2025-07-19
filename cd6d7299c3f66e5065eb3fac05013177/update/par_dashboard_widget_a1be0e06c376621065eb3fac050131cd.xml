@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">079d82c2c376621065eb3fac05013131</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"configVersion":"23.0.0-ci-SNAPSHOT","scoreSize":"auto","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":false,"showScoreUpdateTime":false,"showZero":true,"colorConfig":{"type":"default"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Thuốc","sourceType":"table","tableOrViewName":"x_878770_drugbank_thuoc","filterQuery":"sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()","reportSourceSysId":null,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4Xzg3ODc3MF9kcnVnYmFua190aHVvYzE3NTI5MDE4OTQ4NjE=","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headerTitle":"New Drugs Created Today","headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4Xzg3ODc3MF9kcnVnYmFua190aHVvYzE3NTI5MDE4OTQ4NjE=","id":"ZEdGaWJHVjRYemczT0RjM01GOWtjblZuWW1GdWExOTBhSFZ2WXpFM05USTVNREU0T1RRNE5qRT0xNzUyOTAxODk2MTIz","aggregateFunction":"COUNT","numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":false,"numberInTooltipsEnabled":true,"thousandSeparatorEnabled":true},"axisId":"primary"}],"groupBy":null,"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"hqg2127w","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"id":"showHeaderSeparator","value":true,"noDebounce":true,"propLabel":"Show header separator"}</component_props>
+        <h>12</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>lamquocminhhuy</sys_created_by>
+        <sys_created_on>2025-07-19 05:14:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1be0e06c376621065eb3fac050131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Drugbank" source="x_878770_drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Drugbank">cd6d7299c3f66e5065eb3fac05013177</sys_scope>
+        <sys_update_name>par_dashboard_widget_a1be0e06c376621065eb3fac050131cd</sys_update_name>
+        <sys_updated_by>lamquocminhhuy</sys_updated_by>
+        <sys_updated_on>2025-07-19 05:14:01</sys_updated_on>
+        <visualization/>
+        <w>24</w>
+        <widget_props/>
+        <x>24</x>
+        <y>0</y>
+    </par_dashboard_widget>
+</record_update>
